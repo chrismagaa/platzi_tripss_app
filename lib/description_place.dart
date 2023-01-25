@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'button_purple.dart';
 
 class DescriptionPlace extends StatelessWidget {
 
@@ -13,7 +14,7 @@ class DescriptionPlace extends StatelessWidget {
 
     final start_half =  Container(
       margin: const EdgeInsets.only(
-          top: 323.0,
+          top: 350.0,
           right: 3.0
       ),
       child: const Icon(
@@ -24,7 +25,7 @@ class DescriptionPlace extends StatelessWidget {
 
     final start_boder =  Container(
       margin: const EdgeInsets.only(
-          top: 323.0,
+          top: 350.0,
           right: 3.0
       ),
       child: const Icon(
@@ -35,7 +36,7 @@ class DescriptionPlace extends StatelessWidget {
 
     final star = Container(
       margin: const EdgeInsets.only(
-        top: 323.0,
+        top: 350.0,
         right: 3.0
       ),
       child: const Icon(
@@ -48,10 +49,10 @@ class DescriptionPlace extends StatelessWidget {
     final title_starts = Row(
       children: <Widget>[
         Container(
-          margin: const EdgeInsets.only(top: 320.0, left: 20.0, right: 20.0),
+          margin: const EdgeInsets.only(top: 350.0, left: 20.0, right: 20.0),
           child:  Text(
             namePlace,
-            style: const TextStyle(fontSize: 30.0, fontWeight: FontWeight.w900),
+            style: const TextStyle(fontFamily: "Lato", fontSize: 30.0, fontWeight: FontWeight.w900),
             textAlign: TextAlign.left,
           ),
         ),
@@ -70,15 +71,17 @@ class DescriptionPlace extends StatelessWidget {
     final description = Container(
       margin: const EdgeInsets.only(top: 20.0, left: 20.0, right: 20.0),
       child:  Text(descriptionPlace,
-        style: const TextStyle(fontSize: 15.0, fontWeight: FontWeight.w300),
+        style: const TextStyle(fontFamily: "Lato", fontSize: 15.0, fontWeight: FontWeight.w300),
       ),
 
     );
 
     final columna = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         title_starts,
-       description
+       description,
+        ButtonPurple("Navigate")
       ],
     );
 

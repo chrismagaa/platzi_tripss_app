@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'description_place.dart';
+import 'package:platzi_tripss_app/platzi_trips_cupertino.dart';
+import 'platzi_trips.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -12,50 +14,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Hola perros"),
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          // This is the theme of your application.
+          //
+          // Try running your application with "flutter run". You'll see the
+          // application has a blue toolbar. Then, without quitting the app, try
+          // changing the primarySwatch below to Colors.green and then invoke
+          // "hot reload" (press "r" in the console where you ran "flutter run",
+          // or simply save your changes to "hot reload" in a Flutter IDE).
+          // Notice that the counter didn't reset back to zero; the application
+          // is not restarted.
+          primarySwatch: Colors.blue,
         ),
-        body: new DescriptionPlace("Jalisquillos", 3, "Algo que debemos recordar es que los widgets que usamos como children, pueden definirse bien sea directamente (inline) o bien a través de clases externas (o widgets personalizados) que hemos definido previamente en archivos .dart independientes."),
-      )// const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-  Widget _imagenFondo(){
-    return const Image(
-        image: NetworkImage('https://www.xtrafondos.com/wallpapers/resized/darth-vader-con-sable-de-luz-rojo-9227.jpg?s=large'),
-        height: double.infinity,
-      width: double.infinity,
-      fit: BoxFit.cover
-    );
-  }
-
-  Widget _textoCentral(){
-    return  Center(
-      child: Container(
-        height: 100,
-        color: const Color.fromRGBO(0, 0, 0, 0.5),
-        child:  const Center(
-          child: Text("Darth Vader",
-          style: TextStyle(fontSize: 40, color: Colors.white)),
-      ),
-      ),
+        home: PlatziTripsCupertino()
     );
   }
 }
-
 
 
 class MyHomePage extends StatefulWidget {
@@ -129,7 +104,10 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Text(
               '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+              style: Theme
+                  .of(context)
+                  .textTheme
+                  .headline4,
             ),
           ],
         ),
